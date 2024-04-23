@@ -658,10 +658,6 @@ p {
   padding-bottom: 128px !important;
 }
 
-header {
-  padding: 8px 24px;
-}
-
 a {
   text-decoration: none;
   color: #EDEFF0;
@@ -680,6 +676,7 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 8px 24px;
 }
 
 .border {
@@ -713,6 +710,22 @@ a {
 }
 .input-search:focus {
   outline: none;
+}
+
+.img-profile {
+  width: 56px;
+  height: 56px;
+  background-color: #4E4E50;
+  border-radius: 50%;
+}
+.img-profile img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.post {
+  margin: le;
 }
 
 body {

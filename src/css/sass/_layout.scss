@@ -1,6 +1,6 @@
-header {
-  padding: 8px 24px;
-}
+// header {
+//   padding: 8px 24px;
+// }
 a {
   text-decoration: none;
   color: $white-dark;
@@ -20,6 +20,7 @@ a {
   max-width: 1200px;
 
   margin: 0 auto;
+  padding: 8px 24px;
 }
 
 .border {
@@ -46,16 +47,35 @@ a {
 }
 
 .input-search {
-    height: 48px;
-    min-width: 300px;
-    background-color: $black-light;
-    border: 0;
-    color: $white-light;
-    padding: 8px;
+  height: 48px;
+  min-width: 300px;
+  background-color: $black-light;
+  border: 0;
+  color: $white-light;
+  padding: 8px;
 
-    &:focus {
-        outline: none;
-        // outline: .0625rem solid white;
-      }
-      
+  &:focus {
+    outline: none;
+    // outline: .0625rem solid white;
+  }
+}
+
+.img-profile {
+  width: 56px;
+  height: 56px;
+  background-color: $gray-2;
+  border-radius: 50%;
+  img {
+    display: block;
+    max-width: 100%;
+    border-radius: 50%;
+  }
+}
+
+// .container-posts {
+//   display: flex;
+// }
+
+.post {
+  margin: le;
 }
