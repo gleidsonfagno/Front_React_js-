@@ -10,7 +10,7 @@ npm start
 
 ![estrutura_de_pasta](public/img/estrutura_de_pasta.png)
 
-## Crindo componentes
+## Criando componentes
 
 ```javascript
 import Post from "../Post";
