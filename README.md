@@ -26,3 +26,20 @@ function Article() {
 
 export default Article;
 ```
+
+## Props Componentes
+
+```javascript
+// Componente pai
+function Pai() {
+  return <Filho name="João" />;
+}
+
+// Componente filho
+function Filho(props) {
+  return <p>Olá, {props.name}!</p>;
+}
+
+// Renderiza o componente pai
+ReactDOM.render(<Pai />, document.getElementById('root'));
+```
