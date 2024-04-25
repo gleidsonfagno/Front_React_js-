@@ -43,3 +43,16 @@ function Filho(props) {
 // Renderiza o componente pai
 ReactDOM.render(<Pai />, document.getElementById('root'));
 ```
+
+## JSON Server & API
+
+cria uma aquivo db.json na raiz do projeto;
+
+```javascript
+npm install -g json-server
+
+npx json-server --watch db.json --port 4000
+
+// a porta pode ser qualquer uma que nao seja utilizado
+
+```
