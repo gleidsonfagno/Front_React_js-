@@ -727,4 +727,24 @@ a {
 body {
   width: 100%;
   background-color: #050607;
+}
+
+.add-button {
+  display: block;
+  border: 0;
+  background: greenyellow;
+  padding: 1rem;
+  color: white;
+  font-size: 64px;
+  border-radius: 4px;
+}
+
+.remove-button {
+  display: block;
+  border: 0;
+  background: red;
+  padding: 1rem;
+  color: white;
+  font-size: 64px;
+  border-radius: 4px;
 }/*# sourceMappingURL=style.css.map */

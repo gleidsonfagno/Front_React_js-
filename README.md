@@ -57,7 +57,7 @@ npx json-server --watch db.json --port 4000
 
 ```
 
-## Testando API c Thunder Client
+## Testando API com Thunder Client
 
 fiz o dowload da extensao Thunder Client pra fazer os testes do metos
 
@@ -65,3 +65,30 @@ fiz o dowload da extensao Thunder Client pra fazer os testes do metos
 - POST
 - PATCH
 - DELETE
+
+## React Hooks UseState & onClick
+
+```javascript
+import React, { useState } from 'react';
+
+function ExampleComponent() {
+  // Define um estado para armazenar o valor do contador
+  const [counter, setCounter] = useState(0);
+
+  // Função para lidar com o evento onClick
+  const handleClick = () => {
+    // Atualiza o estado do contador adicionando 1 ao valor atual
+    setCounter(counter + 1);
+  };
+
+  return (
+    <div>
+      <p>Contador: {counter}</p>
+      {/* Botão que dispara a função handleClick quando clicado */}
+      <button onClick={handleClick}>Incrementar</button>
+    </div>
+  );
+}
+
+export default ExampleComponent;
+```
