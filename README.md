@@ -41,7 +41,7 @@ function Filho(props) {
 }
 
 // Renderiza o componente pai
-ReactDOM.render(<Pai />, document.getElementById('root'));
+ReactDOM.render(<Pai />, document.getElementById("root"));
 ```
 
 ## JSON Server & API
@@ -69,7 +69,7 @@ fiz o dowload da extensao Thunder Client pra fazer os testes do metos
 ## React Hooks UseState & onClick
 
 ```javascript
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function ExampleComponent() {
   // Define um estado para armazenar o valor do contador
@@ -111,4 +111,54 @@ const api = axios.create({
 });
 
 export default api;
+```
+
+## Listando os Posts com API
+
+```javascript
+// Este é um exemplo de componente React que faz uma requisição GET para uma API de posts
+// ao clicar em um botão e exibe os posts em um contêiner na página.
+
+// Importa os hooks useState e useEffect do React, e o Axios para fazer requisições HTTP.
+import React, { useState } from "react";
+import axios from "axios";
+
+// Define o componente Main, que faz a requisição à API e exibe os posts.
+const Main = () => {
+  // Define o estado 'post' para armazenar os posts da API.
+  const [post, setPost] = useState([]);
+
+  // Função assíncrona para fazer a requisição à API e atualizar o estado 'post'.
+  async function handleAxios() {
+    try {
+      const response = await axios.get("/posts"); // Faz a requisição GET para a API de posts.
+      setPost(response.data); // Atualiza o estado 'post' com os dados dos posts.
+      console.log(response); // Exibe os dados da resposta no console.
+    } catch (error) {
+      console.log(error); // Exibe um erro no console, caso ocorra algum problema na requisição.
+    }
+  }
+
+  // Renderiza o componente na tela.
+  return (
+    <>
+      <section className="container">
+        <h1>Main.js</h1>
+        <button onClick={handleAxios}>fazer requisição</button> {/* Botão para fazer a requisição à API. */}
+        <div className="mt-5 container-posts">
+          {/* Mapeia sobre o array de 'post' e renderiza cada post utilizando o componente 'Post'. */}
+          {post.map((post) => (
+            <Post key={post.id} subtitle={post.category} title={post.title}>
+              {post.description}
+            </Post>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+};
+
+// Exporta o componente Main para ser utilizado em outros arquivos.
+export default Main;
+
 ```

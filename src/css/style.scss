@@ -15,23 +15,12 @@ body {
   background-color: #050607;
 }
 
-
-.add-button {
-  display: block;
+button {
+  padding: 8px;
+  background-color: white;
   border: 0;
-  background: greenyellow;
-  padding: 1rem;
-  color: white;
-  font-size: 64px;
   border-radius: 4px;
-}
-
-.remove-button {
-  display: block;
-  border: 0;
-  background: red;
-  padding: 1rem;
-  color: white;
-  font-size: 64px;
-  border-radius: 4px;
+  &:hover{
+    background:#aaaa;
+  }
 }
