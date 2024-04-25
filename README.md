@@ -56,3 +56,12 @@ npx json-server --watch db.json --port 4000
 // a porta pode ser qualquer uma que nao seja utilizado
 
 ```
+
+## Testando API c Thunder Client
+
+fiz o dowload da extensao Thunder Client pra fazer os testes do metos
+
+- GET
+- POST
+- PATCH
+- DELETE
