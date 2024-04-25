@@ -92,3 +92,23 @@ function ExampleComponent() {
 
 export default ExampleComponent;
 ```
+
+## Instalando Axios
+
+[Link para o repositório do Axios](https://github.com/axios/axios)
+
+```bash
+npm install axios
+```
+
+```javascript
+// cria uma pasta em components/pages/services/api.js
+
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: "http://localhost:4000/",
+});
+
+export default api;
+```
