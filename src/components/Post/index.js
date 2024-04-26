@@ -1,4 +1,4 @@
-function Post({subtitle, title, children}) {
+function Post({subtitle, title, children, author, date}) {
   return (
     <div className="post mx-2">
       <div className="img-post"></div>
@@ -12,8 +12,8 @@ function Post({subtitle, title, children}) {
           <img src="https://github.com/gleidsonfagno.png" alt="img" />
         </div>
         <div className="description-profile ml-3">
-          <h6 className="color-blue">Gleidson fagno</h6>
-          <p>Aug 2, 2020 - 8 min read</p>
+          <h6 className="color-blue">{author} </h6>
+          <p>{date} </p>
         </div>
       </div>
     </div>

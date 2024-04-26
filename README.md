@@ -162,3 +162,17 @@ const Main = () => {
 export default Main;
 
 ```
+
+O efeito useEffect é usado para fazer uma chamada de API após a primeira renderização e atualizar o estado com os dados recebidos.
+
+```javascript
+
+useEffect(() => {
+    api.get("/posts")
+    .then((response) => {
+      console.log(response.data)
+      setPost(response.data)
+    })
+  }, [])
+
+```
