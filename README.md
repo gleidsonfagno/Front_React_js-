@@ -163,6 +163,8 @@ export default Main;
 
 ```
 
+## React Hook useEffect
+
 O efeito useEffect é usado para fazer uma chamada de API após a primeira renderização e atualizar o estado com os dados recebidos.
 
 ```javascript
@@ -175,4 +177,34 @@ useEffect(() => {
     })
   }, [])
 
+```
+
+## Criando Rotas
+
+```bash
+npm install react-router-dom
+```
+
+```javascript
+criei um aquivo na pasta src/routes.js
+
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Main from "./pages/Main";
+import Article from "./pages/Article";
+
+const AppRoutes = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/articles/:id" element={<Article />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default AppRoutes;
+// no aquivo app.js importa o AppRoutes
 ```

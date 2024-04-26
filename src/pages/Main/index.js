@@ -17,15 +17,14 @@ const Main = () => {
   return (
     <>
       <section className="container">
-        <h2 className="mt-3">Article</h2>
-        {/* <button onClick={handleAxios}>fazer requisiçao</button> */}
+        <h2 className="mt-3">Página Pricipal</h2>
 
         <div className="mt-5 container-posts ">
-          {post.map((post, index) => {
+          {post.map((post) => {
             return (
               <>
                 <Post 
-                   key={index} 
+                   key={post.id} 
                    subtitle={post.category} 
                    title={post.title}
                    author={post.author}
