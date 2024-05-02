@@ -102,7 +102,7 @@ npm install axios
 ```
 
 ```javascript
-// cria uma pasta em components/pages/services/api.js
+// cria uma pasta em components/services/api.js
 
 import axios from "axios";
 
@@ -208,3 +208,6 @@ const AppRoutes = () => {
 export default AppRoutes;
 // no aquivo app.js importa o AppRoutes
 ```
+
+## useState()
+

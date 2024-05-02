@@ -1,6 +1,7 @@
 import Post from "../../components/Post";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
+import { Usestate } from "../Usestate";
 
 const Main = () => {
   const [post, setPost] = useState([]);
@@ -19,6 +20,7 @@ const Main = () => {
       <section className="container">
         <h2 className="mt-3">Página Pricipal</h2>
 
+        <Usestate />
         <div className="mt-5 container-posts ">
           {post.map((post) => {
             return (

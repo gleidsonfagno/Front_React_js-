@@ -1,4 +1,4 @@
-function Post({subtitle, title, children, author, date}) {
+function Post({subtitle, title, children, author, date, id}) {
   return (
     <div className="post mx-2">
       <div className="img-post"></div>
