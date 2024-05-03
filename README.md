@@ -211,3 +211,46 @@ export default AppRoutes;
 
 ## useState()
 
+```javascript
+import React, { useState } from 'react';
+
+function Counter() {
+  // Declare a state variable named "count" and a function to update it
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      {/* On click, call setCount with the updated value */}
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+export default Counter;
+```
+
+## use
+
+```javascript
+import React, { useState, useEffect } from 'react';
+
+function Timer() {
+  const [segundos, setSegundos] = useState(0);
+
+  useEffect(() => {
+    // Esta função será chamada após o componente ser renderizado
+    const interval = setInterval(() => {
+      // Atualize a variável de estado a cada segundo
+      setSegundos(segundos => segundos + 1);
+    }, 1000);
+
+    // Retorna uma função de limpeza para limpar o intervalo quando o componente for desmontado
+    return () => clearInterval(interval);
+  }, []); // A matriz de dependências vazia significa que este efeito é executado apenas uma vez após a renderização inicial
+
+  return (
+    <div>
+```
